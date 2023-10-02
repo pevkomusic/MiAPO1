@@ -32,7 +32,7 @@ namespace WpfApp2
 
         private void about_b_Click(object sender, RoutedEventArgs e)                    //Кнопка "О программе"
         {
-            MessageBox.Show("Задание: Дана квадратная вещественная матрица размерности n. Сравнить сумму элементов матрицы на главной и побочной диагоналях.\nРазработчик: Герасимов Дмитрий гр. ИСП-32", "О программе", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Задание: Дана квадратная вещественная матрица размерности n. Сравнить сумму элементов матрицы на главной и побочной диагоналях.\nРазработчик: Герасимов Дмитрий гр. ИСП-32", "О программе", MessageBoxButton.OK, MessageBoxImage.Information); //Сообщениe
         }
 
         double[,] matr;                                                                 //Объявляем глобально матрицу
@@ -50,11 +50,11 @@ namespace WpfApp2
                         double[,] matr = new double[n, n];
                         dataGrid.ItemsSource = VisualArray.ToDataTable(matr).DefaultView;   //Вносим матрицу в ДатаГрид, используя класс
                     }
-                    else MessageBox.Show("Введите число >1!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);    //МесседжБокс
+                    else MessageBox.Show("Введите число >1!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);    //Сообщение об ошибке
                 }
-                else MessageBox.Show("Введите положительное целое число!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);   //МесседжБокс
+                else MessageBox.Show("Введите положительное целое число!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);   //Сообщение об ошибке
             }
-            else MessageBox.Show("Размерность матрицы не указана!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);  //МесседжБокс
+            else MessageBox.Show("Размерность матрицы не указана!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);  //Сообщение об ошибке
         }
 
 
@@ -86,11 +86,11 @@ namespace WpfApp2
                         }
                         else MessageBox.Show("Введите число >1!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
-                    else MessageBox.Show("Крайний левый предел должен быть меньше крайнего правого!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);    //МесседжБокс об ошибке
+                    else MessageBox.Show("Крайний левый предел должен быть меньше крайнего правого!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);    //Сообщение об ошибке
                 }
-                else MessageBox.Show("Введите положительное целое число!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);                               //МесседжБокс об ошибке
+                else MessageBox.Show("Введите положительное целое число!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);                               //Сообщение об ошибке
             }
-            else MessageBox.Show("Одно или несколько полей не заполнено!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);                           //МесседжБокс об ошибке
+            else MessageBox.Show("Одно или несколько полей не заполнено!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);                           //Сообщение об ошибке
         }
 
         private void rez_b_Click(object sender, RoutedEventArgs e)
@@ -121,9 +121,9 @@ namespace WpfApp2
                         rezult_tb.Text = $"Суммы элементов главной и побочной диагоналей матрицы РАВНЫ ({Math.Round(sumMainDiagonal, 2)} = {Math.Round(sumPobochDiagonal, 2)}).";
                     }
                 }
-                else MessageBox.Show("Матрица не заполнена. Нажмите кнопку 'Рандом' сначала.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);       //МесседжБокс об ошибке
+                else MessageBox.Show("Матрица не заполнена. Нажмите кнопку 'Рандом' сначала.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);       //Сообщение об ошибке
             }
-            else MessageBox.Show("Таблица не создана.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);                                              //МесседжБокс об ошибке
+            else MessageBox.Show("Таблица не создана.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);                                              //Сообщение об ошибке
         }
 
         private void clear_b_Click(object sender, RoutedEventArgs e)
@@ -136,7 +136,7 @@ namespace WpfApp2
                 min_tb.Clear();
                 max_tb.Clear();
             }
-            else MessageBox.Show("Таблицы не существует!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);                                    //МесседжБокс об ошибке
+            else MessageBox.Show("Таблицы не существует!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);                                    //Сообщение об ошибке
         }
 
         private void dataGrid_LoadingRow(object sender, DataGridRowEventArgs e)
